@@ -1,7 +1,7 @@
-﻿@{
-    Layout = null;
-}
-
+﻿﻿
+    @{
+        Layout = null;
+    }
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,7 +26,7 @@
         @await Component.InvokeAsync("_ServiceDefaultComponentPartial")
         <!-- /Why Us Section -->
         <!-- Stats Section -->
-        <section id="stats" class="stats section dark-background">
+       @*  <section id="stats" class="stats section dark-background">
 
             <img src="assets/img/stats-bg.jpg" alt="" data-aos="fade-in">
 
@@ -66,7 +66,7 @@
 
             </div>
 
-        </section><!-- /Stats Section -->
+        </section> *@<!-- /Stats Section -->
         <!-- Menu Section -->
         @await Component.InvokeAsync("_DefaultMenuViewComponentPartial")
        
@@ -80,7 +80,7 @@
    
   <!-- /Events Section -->
         <!-- Chefs Section -->
-        @await Component.InvokeAsync("_ChefDefualtComponentPartial")
+        @* @await Component.InvokeAsync("_ChefDefualtComponentPartial") *@
        
      
         <!-- Book A Table Section -->
@@ -208,9 +208,16 @@
 
             <div class="container" data-aos="fade-up" data-aos-delay="100">
 
-                <div class="mb-5">
+                @* <div class="mb-5">
                     <iframe style="width: 100%; height: 400px;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" allowfullscreen=""></iframe>
-                </div><!-- End Google Maps -->
+                </div> *@
+                <div style="text-decoration:none; overflow:hidden;max-width:100%;width:1300px;height:500px;">
+                    <div id="canvas-for-googlemap" style="height:100%; width:100%;max-width:100%;"><iframe style="height:100%;width:100%;border:0;" 
+                        frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=Kempttalstrasse+26,8330+Pfäffikon+ZH,+The+SunShine+Lougne&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe></div><a class="google-map-code-enabler" 
+                        href="https://www.bootstrapskins.com/themes" id="grab-map-data">premium bootstrap themes</a><style>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                         }</style>
+                </div>
+                <!-- End Google Maps -->
 
                 <div class="row gy-4">
 
@@ -218,8 +225,8 @@
                         <div class="info-item d-flex align-items-center" data-aos="fade-up" data-aos-delay="200">
                             <i class="icon bi bi-geo-alt flex-shrink-0"></i>
                             <div>
-                                <h3>Address</h3>
-                                <p>A108 Adam Street, New York, NY 535022</p>
+                                <h3>Addresse</h3>
+                                <p>Kempttalstrasse 26,8330 Pfäffikon ZH</p>
                             </div>
                         </div>
                     </div><!-- End Info Item -->
@@ -228,8 +235,8 @@
                         <div class="info-item d-flex align-items-center" data-aos="fade-up" data-aos-delay="300">
                             <i class="icon bi bi-telephone flex-shrink-0"></i>
                             <div>
-                                <h3>Call Us</h3>
-                                <p>+1 5589 55488 55</p>
+                                <h3>Nummer</h3>
+                                <p>044 950 60 60</p>
                             </div>
                         </div>
                     </div><!-- End Info Item -->
@@ -238,8 +245,8 @@
                         <div class="info-item d-flex align-items-center" data-aos="fade-up" data-aos-delay="400">
                             <i class="icon bi bi-envelope flex-shrink-0"></i>
                             <div>
-                                <h3>Email Us</h3>
-                                <p>info@example.com</p>
+                                <h3>Email</h3>
+                                <p>info@thesunshinelounge.ch</p>
                             </div>
                         </div>
                     </div><!-- End Info Item -->
@@ -248,8 +255,8 @@
                         <div class="info-item d-flex align-items-center" data-aos="fade-up" data-aos-delay="500">
                             <i class="icon bi bi-clock flex-shrink-0"></i>
                             <div>
-                                <h3>Opening Hours<br></h3>
-                                <p><strong>Mon-Sat:</strong> 11AM - 23PM; <strong>Sunday:</strong> Closed</p>
+                                <h3>Öffnungszeiten<br></h3>
+                                <p><strong>Mon-Donn:</strong> 15Uhr - 24Uhr; <strong>Freitag - Samstag:</strong> 15Uhr - 2Uhr;<strong>Sontag</strong>Geschlossen </p>
                             </div>
                         </div>
                     </div><!-- End Info Item -->
@@ -278,7 +285,7 @@
                         <div class="col-md-12 text-center">
                             <div class="loading">Loading</div>
                             <div class="error-message"></div>
-                            <div class="sent-message">Your message has been sent. Thank you!</div>
+                            <div class="sent-message">Ihre Nachricht wurde gesendet. Vielen Dank!</div>
 
                             <button type="submit">Send Message</button>
                         </div>

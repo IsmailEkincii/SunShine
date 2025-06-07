@@ -32,7 +32,7 @@ namespace ApiProjeKampi.WebApi.Controllers
             var value = _mapper.Map<Message>(createMessageDto);
             _context.Messages.Add(value);
             _context.SaveChanges();
-            return Ok("Mesaj Ekleme İşlemi Başarılı");
+            return Ok("Nachricht erfolgreich hinzugefügt");
         }
 
         [HttpDelete]
@@ -41,7 +41,7 @@ namespace ApiProjeKampi.WebApi.Controllers
             var value = _context.Messages.Find(id);
             _context.Messages.Remove(value);
             _context.SaveChanges();
-            return Ok("Mesaj Silme İşlemi Başarılı");
+            return Ok("Nachrichtenlöschung erfolgreich");
         }
 
         [HttpGet("GetMessage")]
@@ -57,7 +57,7 @@ namespace ApiProjeKampi.WebApi.Controllers
             var value = _mapper.Map<Message>(updateMessageDto);
             _context.Messages.Update(value);
             _context.SaveChanges();
-            return Ok("Mesaj Güncelleme İşlemi Başarılı");
+            return Ok("Nachrichtenaktualisierung erfolgreich");
         }
 
         [HttpGet("MessageListByIsReadFalse")]

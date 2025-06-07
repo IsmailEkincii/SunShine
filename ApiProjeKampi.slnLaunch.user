@@ -1,0 +1,17 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Path": "ApiProjeKampi.WebApi\\ApiProjeKampi.WebApi.csproj",
+        "Action": "Start",
+        "DebugTarget": "ApiProjeKampi.WebApi"
+      },
+      {
+        "Path": "ApiProjeKampi.WebUI\\ApiProjeKampi.WebUI.csproj",
+        "Action": "Start",
+        "DebugTarget": "ApiProjeKampi.WebUI"
+      }
+    ]
+  }
+]

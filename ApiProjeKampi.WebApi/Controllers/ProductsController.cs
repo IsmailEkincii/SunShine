@@ -25,6 +25,7 @@ namespace ApiProjeKampi.WebApi.Controllers
 
         [HttpGet]
         public IActionResult ProductList()
+        
         {
             var values = _context.Products.ToList();
             return Ok(values);
@@ -92,6 +93,13 @@ namespace ApiProjeKampi.WebApi.Controllers
         {
             var value = _context.Products.Include(x => x.Category).ToList();
             return Ok(_mapper.Map<List<ResultProductWithCategoryDto>>(value));
+        }
+
+        [HttpGet("api/products")]
+        public IActionResult GetProductsByCategory(string category)
+        {
+            var products = _context.Products.Where(p => p.CategoryName == category).ToList();
+            return Ok(products);
         }
     }
 }
