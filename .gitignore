@@ -1,0 +1,13 @@
+# Build sonuçları
+bin/
+obj/
+
+# Visual Studio dosyaları
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Diğer
+*.log
